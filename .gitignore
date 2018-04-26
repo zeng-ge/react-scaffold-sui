@@ -1,0 +1,21 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+
+
+# project temp files
+.DS_Store
+dist/
+.vscode/
+.idea/
+packed/
+minfiles/
+
+# testing
+/coverage
+
+# log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

@@ -1,0 +1,66 @@
+{
+  "name": "cmb-intelligent-platform-qiantang-river",
+  "version": "1.0.0",
+  "main": "app/index.js",
+  "author": "thoughtworks",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.17.0",
+    "classnames": "^2.2.5",
+    "fastclick": "^1.0.6",
+    "lodash": "^4.17.4",
+    "moment": "^2.19.2",
+    "rc-queue-anim": "^1.4.1",
+    "react": "^16.1.0",
+    "react-dom": "^16.1.0",
+    "react-redux": "^5.0.6",
+    "react-redux-toastr": "^7.1.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "redux": "3.7.2",
+    "redux-actions": "2.2.1",
+    "redux-persist": "4.10.2",
+    "redux-saga": "0.16.0",
+    "reselect": "^3.0.1",
+    "seamless-immutable": "7.1.2"
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.2.15",
+    "@storybook/addon-console": "^1.0.0",
+    "@storybook/addon-links": "^3.2.15",
+    "@storybook/react": "^3.2.15",
+
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+
+    "eslint": "^4.11.0",
+    "eslint-plugin-react": "^7.4.0",
+
+    "less": "^2.7.3",
+    "less-loader": "^4.0.5",
+    "postcss-loader": "^2.0.8",
+    "file-loader": "^1.1.5",
+    "css-loader": "^0.28.7",
+    "style-loader": "^0.19.0",
+    "url-loader": "^0.6.2",
+
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "2.7.1",
+    "webpack-merge": "^4.1.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1",
+
+    "jest": "^22.4.2",
+    "jest-environment-node": "^22.1.0",
+    "react-test-renderer": "^16.2.0",
+    "redux-saga-test-plan": "^3.3.1",
+    "mockdate": "^2.0.2"
+  }
+}

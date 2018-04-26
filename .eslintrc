@@ -1,0 +1,48 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "env": {
+    "jest": true,
+    "node": true,
+    "es6": true,
+    "browser": true
+  },
+  "globals":{
+    "__DEV__": true
+  },
+  "rules": {
+    "indent": ["error", 2, { "SwitchCase": 1 }],
+    "semi": ["error", "never"],
+    "max-len": ["error", { "code":110, "ignoreStrings": true, "ignoreComments": true, "ignoreTemplateLiterals": true }],
+    "comma-dangle": ["error", { "arrays": "always-multiline", "imports": "always-multiline", "exports": "never", "objects": "always-multiline", "functions": "only-multiline" }],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "import/extensions": "off",
+    "no-useless-escape": "off",
+    "no-multiple-empty-lines": ["error", {"max": 2}],
+    "arrow-spacing": ["error", { "before": true, "after": true }],
+    "space-infix-ops": "error",
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "object-curly-spacing": ["error", "always", { "arraysInObjects": false, "objectsInObjects": false }],
+    "array-bracket-spacing": ["error", "never"],
+    "comma-spacing": ["error", { "before": false, "after": true }],
+    "key-spacing": ["error", { "afterColon": true }],
+    "space-before-blocks": ["error", {"functions": "always","keywords": "always"}],
+
+    "no-trailing-spaces": ["error", { "ignoreComments": true }],
+    "no-unused-vars": ["error", {"varsIgnorePattern": "^_", "argsIgnorePattern": "^_"}],
+    "no-case-declarations": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "curly": ["error", "multi-line"],
+    "arrow-parens": ["error", "as-needed"],
+
+    "react/no-unescaped-entities": "off",
+    "react/no-deprecated": "off",
+    "react/jsx-curly-spacing": ["error", "never"],
+    "react/display-name": "off",
+    "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "always" }],
+    "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
+    "react/jsx-indent": ["error", 2],
+    "react/jsx-indent-props": ["error", 2],
+    "react/jsx-equals-spacing": ["error", "never"]
+  }
+}
