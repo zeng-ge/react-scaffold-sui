@@ -1,13 +1,13 @@
 import immutable from 'seamless-immutable'
-import { createReducer } from '../../services/ReducerService'
+import { createReducer } from '../../utils/reducer'
 
 const initialState = immutable.from({
   user: {},
 })
-const actions = {
+const actonHandlers = {
   saveUser(state, payload) {
     return state.set('user', payload.user)
   },
 }
 
-export default createReducer(actions, initialState)
+export default createReducer(actonHandlers, initialState)

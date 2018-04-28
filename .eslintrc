@@ -13,7 +13,7 @@
   "rules": {
     "indent": ["error", 2, { "SwitchCase": 1 }],
     "semi": ["error", "never"],
-    "max-len": ["error", { "code":110, "ignoreStrings": true, "ignoreComments": true, "ignoreTemplateLiterals": true }],
+    "max-len": ["error", { "code":120, "ignoreStrings": true, "ignoreComments": true, "ignoreTemplateLiterals": true }],
     "comma-dangle": ["error", { "arrays": "always-multiline", "imports": "always-multiline", "exports": "never", "objects": "always-multiline", "functions": "only-multiline" }],
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "import/extensions": "off",

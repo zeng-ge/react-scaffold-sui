@@ -1,4 +1,4 @@
-import { all } from 'redux-saga'
+import { all } from 'redux-saga/effects'
 import _ from 'lodash'
 import registry from './registry'
 
@@ -8,7 +8,14 @@ const sagas = _.reduce(features, (accumulator, feature) => {
 }, [])
 
 const rootSaga = function*() {
-  const allEffects = _.map(sagas, saga => saga())
+  const allEffects = _
+    .chain(sagas)
+    .map(sagaMap => {
+      return _.map(sagaMap, saga => saga())
+    })
+    .flatten()
+    .value()
+
   yield all(allEffects)
 }
 

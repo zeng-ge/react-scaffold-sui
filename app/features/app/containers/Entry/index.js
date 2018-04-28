@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import scss from './index.less'
+import less from './index.less'
 
 export default class Entry extends Component {
 
@@ -9,8 +9,8 @@ export default class Entry extends Component {
 
   render() {
     return (
-      <div className={scss.entry}>
-        Entry
+      <div className={less.entry}>
+        Entry123123
       </div>
     )
   }

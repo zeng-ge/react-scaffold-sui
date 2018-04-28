@@ -23,8 +23,8 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.css', '.less'],
     alias: {
-      assets: path.resolve(__dirname, 'app/assets'),
-      constants: path.resolve(__dirname, 'app/constants'),
+      assets: path.resolve(__dirname, '../app/assets'),
+      constants: path.resolve(__dirname, '../app/constants'),
     },
   },
   module: {
@@ -45,30 +45,25 @@ module.exports = {
       {
         test: /\.less$/,
         exclude: /node_modules/,
-        use: extractLess.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                modules: true,
-                localIdentName: '[path][name]__[local]-[hash:base64:5]',
-              },
+        // use: extractLess.extract({
+        //   fallback: 'style-loader',
+        use: [
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[path][name]__[local]-[hash:base64:5]',
             },
-            {
-              loader: 'postcss-loader',
-            },
-            {
-              loader: 'less-loader',
-              options: {
-                paths: [
-                  path.resolve(__dirname, './src/shared/styles'),
-                ],
-              },
-            },
+          },
+          // {
+          //   loader: 'postcss-loader',
+          // },
+          {
+            loader: 'less-loader',
+          },
 
-          ],
-        }),
+        ],
+        // }),
       },
       {
         test: /\.(png|jpg|gif|svg)$/,
@@ -91,7 +86,6 @@ module.exports = {
     new CleanWebpackPlugin([path.resolve(__dirname, 'dist')], { root: path.resolve(__dirname ) }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: process.env.NODE_ENV || 'local',
-      USE_MOCK_SERVER: process.env.USE_MOCK_SERVER || 'false',
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',

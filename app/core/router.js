@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter } from 'react-router-dom'
+import { HashRouter, Switch } from 'react-router-dom'
 import _ from 'lodash'
 import registry from './registry'
 
@@ -11,7 +11,9 @@ const routes = _.reduce(features, (accumulator, feature) => {
 const Router = function() {
   return (
     <HashRouter>
-      { routes }
+      <Switch>
+        { routes }
+      </Switch>
     </HashRouter>
   )
 }
