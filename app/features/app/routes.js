@@ -1,8 +1,8 @@
 import React from 'react'
 import { Route } from 'react-router'
-import Entry from './containers/Entry'
+import FakeLogin from './containers/FakeLogin'
 const routes = [
-  <Route key="entry" path="/" component={Entry} />,
+  <Route key="fakeLogin" path="/" component={FakeLogin} />,
 ]
 
 export default routes

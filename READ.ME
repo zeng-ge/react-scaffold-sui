@@ -1,0 +1,22 @@
+### 目录结构
+- core
+  router.js     汇聚feature的route
+  saga.js       汇聚feature的saga.js
+  store.js      定义redux的store，添加middleware
+- features
+  按feature组织页面
+  containers    容器
+  components    该feature下的公共组件
+  actions.js    用redux-actions来得到这种格式的action{ type: 'TYPE', payload: { user: {} }}
+  reducer.js    定义actionHandlers来更新reducer
+  sagas.js      所有需要从server取数据的方法都用saga来定义
+  routes.js     定义该feature下页面的路由
+  index.js      将reducer、saga、route汇聚起来，交由core/register处理
+- components
+  整个项目的公共组件
+- constants
+  定义常量
+- services
+  提供服务，如http用来处理发送请求
+- utils
+  工具方法

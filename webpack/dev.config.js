@@ -1,4 +1,4 @@
-import fs from 'fs'
+const fs = require('fs')
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -20,7 +20,7 @@ fs.watchFile(path.resolve(__dirname, './proxy.config.js'), updateProxy)
 const devConfig = {
   entry: {
     app: [
-      'react-hot-loader/patch',
+      // 'react-hot-loader/patch',
       path.resolve(__dirname, '../app/index.js'),
     ],
   },
@@ -35,16 +35,16 @@ const devConfig = {
       filename: 'index.html',
       chunks: ['vendor', 'app'],
     }),
-    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
   ],
   devtool: 'cheap-module-source-map',
   devServer: {
     contentBase: '../dist',
     disableHostCheck: true,
-    hot: true,
+    // hot: true,
     host: 'localhost.paas.cmbuat.com',
-    proxy: () => proxyConfig,
+    proxy: [() => proxyConfig],
   },
 }
 

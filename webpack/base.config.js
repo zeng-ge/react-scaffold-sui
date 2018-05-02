@@ -45,25 +45,24 @@ module.exports = {
       {
         test: /\.less$/,
         exclude: /node_modules/,
-        // use: extractLess.extract({
-        //   fallback: 'style-loader',
-        use: [
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              localIdentName: '[path][name]__[local]-[hash:base64:5]',
+        use: extractLess.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                modules: true,
+                localIdentName: '[path][name]__[local]-[hash:base64:5]',
+              },
             },
-          },
-          // {
-          //   loader: 'postcss-loader',
-          // },
-          {
-            loader: 'less-loader',
-          },
-
-        ],
-        // }),
+            {
+              loader: 'postcss-loader',
+            },
+            {
+              loader: 'less-loader',
+            },
+          ],
+        }),
       },
       {
         test: /\.(png|jpg|gif|svg)$/,

@@ -7,7 +7,7 @@ import { APP_NAME } from 'constants'
 const specialPropNames = ['PLSPECUSER', 'PLRECOSEND', 'CTSECCON', 'CTSECRGE']
 export default class Http {
   axios = null
-  constructor(server, env = '') {
+  constructor(server = '', env = '') {
     this.server = server
     this.env = env
     this.axios = axios.create({
@@ -117,3 +117,7 @@ export default class Http {
   }
 
 }
+
+
+const tracking = new Http()
+export { tracking }

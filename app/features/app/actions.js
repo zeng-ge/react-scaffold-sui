@@ -1,6 +1,6 @@
-import { createActions } from 'redux-actions'
+import { createActions } from '../../utils/actions'
 
 export default createActions({
-  fetchUser: () => ({}),
   saveUser: user => ({ user }),
+  eventTracking: (module, action) => ({ module, action }),
 })
