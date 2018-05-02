@@ -8,7 +8,7 @@ describe('cookie', () => {
     Object.defineProperty(document, 'cookie', {
       get() {
         return currentCookie
-      }
+      },
     })
   })
 
