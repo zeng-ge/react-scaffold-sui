@@ -4,10 +4,8 @@ import { func, array, object, oneOfType } from 'prop-types'
 import _ from 'lodash'
 import actions from '../../actions'
 import { getUserInfo } from '../../../../utils/cookie'
-// import less from './index.less'
 @connect(null, {
   saveUser: actions.saveUser,
-  eventTracking: actions.eventTracking,
 })
 export default class Entry extends Component {
 
@@ -15,6 +13,15 @@ export default class Entry extends Component {
     saveUser: func,
     eventTracking: func,
     children: oneOfType([array, object]),
+  }
+
+  constructor(props) {
+    super(props)
+    const { saveUser } = props
+    const userInfo = this.getUserInfo()
+    if (!_.isEmpty(userInfo)) {
+      saveUser(userInfo)
+    }
   }
 
   /**
@@ -27,16 +34,6 @@ export default class Entry extends Component {
       userInfo = getUserInfo()
     }
     return userInfo
-  }
-
-  componentWillMount() {
-    const { saveUser, eventTracking } = this.props
-    const userInfo = this.getUserInfo()
-    if (!_.isEmpty(userInfo)) {
-      saveUser(userInfo)
-    }
-    //埋点
-    eventTracking('open', 'open')
   }
 
   render() {

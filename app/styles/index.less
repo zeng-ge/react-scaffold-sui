@@ -1,14 +1,14 @@
 @import './reset.less';
+@import './mixins.less';
 
 html,
 body{
-  width: 100vw;
-  height: 100vh;
+  .viewport();
 }
+
 :global{
   #app{
-    width: 100vw;
-    height: 100vh;
+    .viewport();
     overflow-y: hidden;
   }
 }
