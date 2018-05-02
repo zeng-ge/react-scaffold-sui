@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Viewport viewport snapshot 1`] = `
+<div
+  className="viewport viewport"
+  id="firstViewport"
+>
+  <div />
+</div>
+`;

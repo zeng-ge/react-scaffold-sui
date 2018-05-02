@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FakeLogin should FakeLogin logined 1`] = `
+<div
+  className="viewport"
+>
+  <div>
+    <div>
+      <a
+        href="/home"
+      >
+        己登录, 去首页
+      </a>
+    </div>
+    <a
+      href="http://lphomepad-dev.paas.cmbuat.com"
+      target="_blank"
+    >
+      请点击此处模拟登录
+    </a>
+  </div>
+</div>
+`;
+
+exports[`FakeLogin should FakeLogin not login 1`] = `
+<div
+  className="viewport"
+>
+  <div>
+    <div>
+      <span>
+        未登录
+      </span>
+    </div>
+    <a
+      href="http://lphomepad-dev.paas.cmbuat.com"
+      target="_blank"
+    >
+      请点击此处模拟登录
+    </a>
+  </div>
+</div>
+`;
