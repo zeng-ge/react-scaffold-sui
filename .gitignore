@@ -11,10 +11,9 @@ dist/
 .idea/
 packed/
 minfiles/
-coverage/
 
 # testing
-/coverage
+coverage/
 
 # log
 npm-debug.log*

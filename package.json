@@ -9,7 +9,7 @@
     "test": "jest",
     "test:coverage": "coverage=ok jest",
     "test:watch": "jest --watch",
-    "lint": "eslint --ext .js ./app",
+    "lint": "eslint --ext .js ./",
     "precommit": "yarn lint",
     "prepush": "yarn test"
   },
