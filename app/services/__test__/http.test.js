@@ -9,10 +9,11 @@ describe('http service', () => {
   })
 
   test('shoud buildWorkdbarParameters without special parameters work right', () => {
-    const body = http.buildWorkdbarParameters('fakeWorkBar', [{ name: 'sky' }, { age: 20 }])
+    const body = http.buildWorkdbarParameters('fakeWorkBar', [{ name: 'sky' }, { age: 20 }, [{ province: 'zhejiang' }]])
     expect(body).toEqual({
       fakeWorkBarX1: [{ name: 'sky' }],
       fakeWorkBarX2: [{ age: 20 }],
+      fakeWorkBarX3: [{ province: 'zhejiang' }],
     })
   })
 
