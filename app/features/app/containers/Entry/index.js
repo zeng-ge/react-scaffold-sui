@@ -4,14 +4,11 @@ import { func, array, object, oneOfType } from 'prop-types'
 import _ from 'lodash'
 import actions from '../../actions'
 import { getUserInfo } from '../../../../utils/cookie'
-@connect(null, {
-  saveUser: actions.saveUser,
-})
-export default class Entry extends Component {
+
+export class Entry extends Component {
 
   static propTypes = {
     saveUser: func,
-    eventTracking: func,
     children: oneOfType([array, object]),
   }
 
@@ -40,3 +37,7 @@ export default class Entry extends Component {
     return this.props.children
   }
 }
+
+export default connect(null, {
+  saveUser: actions.saveUser,
+})(Entry)
