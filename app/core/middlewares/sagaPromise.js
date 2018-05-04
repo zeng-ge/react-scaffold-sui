@@ -52,12 +52,15 @@
 export default function() {
   return function(next) {
     return function(action) {
+      if (!action.async) {
+        return next(action)
+      }
       const latestAction = { ...action }
       const promise = new Promise((resolve, reject) => {
         latestAction.resolve = resolve
         latestAction.reject = reject
       })
-      next(action)
+      next(latestAction)
       return promise
     }
   }
