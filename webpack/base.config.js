@@ -25,6 +25,10 @@ module.exports = {
     alias: {
       assets: path.resolve(__dirname, '../app/assets'),
       constants: path.resolve(__dirname, '../app/constants'),
+      components: path.resolve(__dirname, '../app/components'),
+      features: path.resolve(__dirname, '../app/features'),
+      services: path.resolve(__dirname, '../app/services'),
+      utils: path.resolve(__dirname, '../app/utils'),
     },
   },
   module: {

@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { func, array, object, oneOfType } from 'prop-types'
 import _ from 'lodash'
 import actions from '../../actions'
-import { getUserInfo } from '../../../../utils/cookie'
+import { getUserInfo } from 'utils/cookie'
 
 export class Entry extends Component {
 

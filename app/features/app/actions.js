@@ -1,4 +1,4 @@
-import { createActions } from '../../utils/actions'
+import { createActions } from 'utils/actions'
 
 export default createActions({
   saveUser: user => ({ user }),

@@ -1,10 +1,11 @@
 import axios from 'axios'
 import _ from 'lodash'
-import { isContainKey } from '../utils'
-import { APP_NAME } from 'constants'
+import { isContainKey } from 'utils'
+import { APP_NAME } from '../constants'
 
 //特殊参数的key
 const specialPropNames = ['PLSPECUSER', 'PLRECOSEND', 'CTSECCON', 'CTSECRGE']
+//TODO 添加axios的拦截器，来统一处理loading, error等信息
 export default class Http {
   axios = null
   constructor(server = '', env = '') {

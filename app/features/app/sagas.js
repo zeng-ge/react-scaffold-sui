@@ -1,8 +1,10 @@
 import { takeEvery, call } from 'redux-saga/effects'
-import { tracking } from '../../services/eventTracking'
+import { tracking } from 'services/eventTracking'
 import actions from './actions'
-
-function* eventTracking(action) {
+/**
+ *
+ */
+export function* eventTrackingWorker(action) {
   const { payload } = action
   try {
     yield call(tracking, payload.module, payload.action)
@@ -15,7 +17,6 @@ function* eventTracking(action) {
 /**
  * 每次dispatch actions.eventTracking时都会执行
  */
-export function* eventTrackingSaga() {
-  yield takeEvery(actions.eventTracking, eventTracking)
-
+export function* eventTrackingWatcher() {
+  yield takeEvery(String(actions.eventTracking), eventTrackingWorker)
 }

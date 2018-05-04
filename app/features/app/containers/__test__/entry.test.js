@@ -5,6 +5,10 @@ import rendered from 'react-test-renderer'
 
 describe('app/containers/Entry', () => {
 
+  beforeEach(() => {
+    window.top.User = null
+  })
+
   test('should Entry show children', () => {
     const component = shallow(
       <Entry>
@@ -17,7 +21,6 @@ describe('app/containers/Entry', () => {
   test('should Entry trigger save user', () => {
     window.top.User = { name: 'sky' }
     const saveUser = jest.fn()
-    //得到的component.type()是div，所以component.prop('saveUser')什么也拿不到
     shallow(
       <Entry saveUser={saveUser}  >
         <div>this is entry</div>

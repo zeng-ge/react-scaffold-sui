@@ -35,8 +35,8 @@ describe('http service', () => {
   test('shoud buildResponse without public interface work right', () => {
     const response = {
       INFBDY: {
-        fakeWorkBarX1: [1],
-        fakeWorkBarX2: [2],
+        fakeWorkBarZ1: [1],
+        fakeWorkBarZ2: [2],
       },
     }
     const body = http.buildResponse(response, 'fakeWorkBar')
@@ -46,8 +46,8 @@ describe('http service', () => {
   test('shoud buildResponse with public interface work right', () => {
     const response = {
       INFBDY: {
-        fakeWorkBarX1: [1],
-        fakeWorkBarX2: [2],
+        fakeWorkBarZ1: [1],
+        fakeWorkBarZ2: [2],
         PLRECOSEND: [{ id: '123456' }],
       },
     }
@@ -59,8 +59,8 @@ describe('http service', () => {
     http.axios.post.mockReturnValue(Promise.resolve({
       data: {
         INFBDY: {
-          'fakeWorkBarX1': [1],
-          'fakeWorkBarX2': [2],
+          'fakeWorkBarZ1': [1],
+          'fakeWorkBarZ2': [2],
         },
       },
     }))
@@ -73,9 +73,9 @@ describe('http service', () => {
       data: {
         INFBDY: {
           PLRECOSEND: 'PLRECOSEND',
-          'fakeWorkBarX1': [1],
+          'fakeWorkBarZ1': [1],
           PLSPECUSER: 'PLSPECUSER',
-          'fakeWorkBarX2': [2],
+          'fakeWorkBarZ2': [2],
         },
       },
     }))

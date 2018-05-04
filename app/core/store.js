@@ -1,5 +1,6 @@
 import { createStore, combineReducers, compose, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
+import sagaPromise from './middlewares/sagaPromise'
 import reducers from './reducer'
 import rootSaga from './saga'
 
@@ -7,6 +8,7 @@ const rootReducer = combineReducers(reducers)
 
 const sagaMiddleware = createSagaMiddleware()
 const middlewares = [
+  sagaPromise,
   sagaMiddleware,
 ]
 

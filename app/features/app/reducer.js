@@ -1,5 +1,5 @@
 import immutable from 'seamless-immutable'
-import { createReducer } from '../../utils/reducer'
+import { createReducer } from 'utils/reducer'
 
 const initialState = immutable.from({
   user: {},

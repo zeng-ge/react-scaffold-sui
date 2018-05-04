@@ -4,17 +4,15 @@ import registry from './registry'
 
 const features = registry()
 const sagas = _.reduce(features, (accumulator, feature) => {
-  return _.concat(accumulator, feature.sagas || [])
+  const featureSagas = feature.sagas || []
+  const watchs = _.filter(featureSagas, (saga, key) => {
+    return _.endsWith(key, 'Watcher')
+  })
+  return _.concat(accumulator, watchs)
 }, [])
 
 const rootSaga = function*() {
-  const allEffects = _
-    .chain(sagas)
-    .map(sagaMap => {
-      return _.map(sagaMap, saga => saga())
-    })
-    .flatten()
-    .value()
+  const allEffects = _.map(sagas, saga => saga())
 
   yield all(allEffects)
 }

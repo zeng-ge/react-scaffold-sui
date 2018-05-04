@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FakeLogin should FakeLogin logined 1`] = `
+exports[`FakeLogin render FakeLogin with user 1`] = `
 <div
   className="viewport"
 >
@@ -22,7 +22,7 @@ exports[`FakeLogin should FakeLogin logined 1`] = `
 </div>
 `;
 
-exports[`FakeLogin should FakeLogin not login 1`] = `
+exports[`FakeLogin render FakeLogin without user 1`] = `
 <div
   className="viewport"
 >

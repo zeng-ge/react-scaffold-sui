@@ -2,8 +2,13 @@ import React, { Component } from 'react'
 import { object } from 'prop-types'
 import { connect } from 'react-redux'
 import _ from 'lodash'
-import Viewport from '../../../../components/Viewport'
-export class FakeLogin extends Component {
+import Viewport from 'components/Viewport'
+@connect(
+  state => ({
+    user: state.app.user,
+  })
+)
+export default class FakeLogin extends Component {
 
   static propTypes = {
     user: object,
@@ -39,9 +44,3 @@ export class FakeLogin extends Component {
     )
   }
 }
-
-export default connect(
-  state => ({
-    user: state.app.user,
-  })
-)(FakeLogin)
