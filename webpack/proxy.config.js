@@ -1,6 +1,6 @@
 const env = {
-  local: 'http://localhost.paas.cmbuat.com:3000',
-  dev: 'http://lphomepad-dev.paas.cmbuat.com',
+  local: 'http://localhost.gerry.com:3000',
+  dev: 'http://project.gerry.com.com',
 }
 
 const target = env.dev
