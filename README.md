@@ -1,4 +1,4 @@
-# 随贷通
+# 项目脚手架
 ### 目录结构
 - core
   - router.js     汇聚feature的route
